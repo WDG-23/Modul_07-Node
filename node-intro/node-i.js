@@ -1,7 +1,5 @@
 // import { writeFileSync, writeFile, readFile } from 'node:fs';
-import { writeFile, readFile } from 'node:fs/promises';
-
-import { add, myMagicNumber } from './utils.js';
+import { writeFile } from 'node:fs/promises';
 
 // const myModule = require('./utils.js');
 
