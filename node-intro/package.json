@@ -1,0 +1,15 @@
+{
+  "name": "intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node-i.js",
+  "scripts": {
+    "hallo": "echo \"Hallo, Leute!\"",
+    "dev": "node --watch node-i.js",
+    "start": "node node-i.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
