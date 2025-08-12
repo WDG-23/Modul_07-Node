@@ -9,8 +9,8 @@ const myObject = {
 const fakeDataBase = [myObject];
 
 const recipes = [
-  { id: 1, name: 'Fischstäbchen' },
-  { id: 2, name: 'Kartoffelpuffer' },
+  { id: 1, title: 'Fischstäbchen' },
+  { id: 2, title: 'Kartoffelpuffer' },
 ];
 
 const getRecipes = (response) => {
