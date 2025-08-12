@@ -12,7 +12,8 @@ const createFileWithMessage = async (message) => {
   const mm = padNum(date.getMonth() + 1);
   const dd = padNum(date.getDate());
 
-  const directory = path.join(import.meta.dirname, `${yyyy}-${mm}-${dd}`);
+  // const directory = path.join(import.meta.dirname, `${yyyy}-${mm}-${dd}`);
+  const directory = `./${yyyy}-${mm}-${dd}`;
 
   if (!existsSync(directory)) {
     await mkdir(directory);
@@ -26,16 +27,20 @@ const createFileWithMessage = async (message) => {
 
   try {
     await appendFile(filePath, message + '\n');
+    return true;
   } catch (error) {
     console.log(error);
+    return false;
   }
 };
 
-if (args.length === 0) {
-  console.log('User input required');
-  process.exit(1);
-}
-createFileWithMessage(args.join(' '));
+export default createFileWithMessage;
+
+// if (args.length === 0) {
+//   console.log('User input required');
+//   process.exit(1);
+// }
+// createFileWithMessage(args.join(' '));
 
 // console.log(new Date().toISOString().split('T')[0]);
 //  ./yyyy-mm-dd/
